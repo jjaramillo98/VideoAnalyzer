@@ -102,7 +102,7 @@ def transcribe_audio(
         response = openai.Audio.transcribe(model, audio)
         transcripts.append(response["text"])
 
-        # Throttle requests to avoid rate limiting. Free tier BS
+        # Throttle requests to avoid rate limiting.
         # logger.info("Throttling API calls. Thread sleep for 20 seconds")
         # time.sleep(20)
 
@@ -134,7 +134,7 @@ def summarize(
         summary = response["choices"][0]["message"]["content"]
         summaries.append(summary)
 
-        # Throttle requests to avoid rate limiting. Free tier BS
+        # Throttle requests to avoid rate limiting.
         # logger.info("Throttling API calls. Thread sleep for 20 seconds")
         # time.sleep(20)
 
